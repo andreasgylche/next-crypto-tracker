@@ -1,0 +1,57 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bolder;
+  letter-spacing: -1px;
+}
+
+.nav {
+  background-color: gainsboro;
+  padding: 1rem 1.5rem;
+  border-radius: 0.5rem;
+}
+
+.list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.list a {
+  font-weight: 500;
+}
+
+.active {
+  color: lightgreen;
+  position: relative;
+}
+
+.active::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: lightgreen;
+  bottom: -80%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.item:not(:last-child) {
+  margin-right: 1rem;
+}
+
+@media (prefers-color-scheme: dark) {
+  .nav {
+    background-color: #111;
+  }
+}
