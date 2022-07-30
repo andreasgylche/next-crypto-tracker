@@ -1,6 +1,8 @@
 import axios from 'axios';
 import Head from 'next/head';
 import styles from '../styles/Home.module.css';
+import TrendingCoins from '../components/trending/TrendingCoins';
+import TopCoins from '../components/top/TopCoins';
 
 export default function Home({ trendingCoins, allCoins }) {
   return (
@@ -13,12 +15,8 @@ export default function Home({ trendingCoins, allCoins }) {
 
       <div>
         <h1>Next.js Crypto Tracker</h1>
-        {trendingCoins.coins.map((coin) => {
-          return <p key={coin.item.id}>{coin.item.name}</p>;
-        })}
-        {allCoins.map((coin) => {
-          return <p key={coin.id}>{coin.name}</p>;
-        })}
+        <TrendingCoins trendingCoins={trendingCoins} />
+        <TopCoins allCoins={allCoins} />
       </div>
     </div>
   );
