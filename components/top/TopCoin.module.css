@@ -1,0 +1,57 @@
+.topCoin {
+  display: grid;
+  grid-template-columns: 5% 5% 40% 20% 10% 20%;
+  align-items: center;
+  padding: 1rem 1.5rem;
+  background-color: #111;
+  border-radius: 0.5rem;
+  border: transparent 1px solid;
+  transition: border 0.3s;
+}
+
+.topCoin:hover {
+  border: lightgreen 1px solid;
+}
+
+.rank {
+  font-weight: bold;
+  opacity: 0.5;
+}
+
+.logo {
+  height: 25px;
+  width: 25px;
+  justify-self: flex-start;
+  border-radius: 25px;
+}
+
+.name {
+  justify-self: flex-start;
+}
+
+.symbol {
+  font-weight: bold;
+  opacity: 0.5;
+  font-size: 0.75em;
+  margin-left: 0.5em;
+}
+
+.price {
+  justify-self: flex-end;
+}
+
+.priceChange {
+  justify-self: flex-end;
+}
+
+.marketCap {
+  justify-self: flex-end;
+}
+
+.green {
+  color: lightgreen;
+}
+
+.red {
+  color: lightcoral;
+}

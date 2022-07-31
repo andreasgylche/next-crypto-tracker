@@ -1,0 +1,13 @@
+.trendingCoin {
+  width: 100%;
+  padding: 1rem 1.5rem;
+  background-color: #111;
+  border-radius: 0.5rem;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.logo {
+  margin-right: 0.5rem;
+  border-radius: 25px;
+}

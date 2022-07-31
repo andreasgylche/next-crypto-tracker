@@ -1,13 +1,17 @@
-import { Children } from 'react';
-import styles from '../../styles/Home.module.css';
+import TrendingCoin from './TrendingCoin';
+import styles from './TrendingCoins.module.css';
 
 export default function TrendingCoins({ trendingCoins }) {
   return (
     <div>
-      <h2>Trending coins the last 24 hours</h2>
-      {trendingCoins.coins.map((coin) => {
-        return <p key={coin.item.id}>{coin.item.name}</p>;
-      })}
+      <h4>Trending coins the last 24 hours</h4>
+      <div className={styles.trendingGrid}>
+        {trendingCoins.coins
+          .filter((coin, index) => index < 4)
+          .map((coin) => (
+            <TrendingCoin key={coin.item.id} coin={coin} />
+          ))}
+      </div>
     </div>
   );
 }

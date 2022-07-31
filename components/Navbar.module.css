@@ -30,6 +30,10 @@
   font-weight: 500;
 }
 
+.list a:hover {
+  color: lightgreen;
+}
+
 .active {
   color: lightgreen;
   position: relative;

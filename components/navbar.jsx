@@ -1,4 +1,4 @@
-import styles from '../styles/Navbar.module.css';
+import styles from './Navbar.module.css';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 
@@ -8,7 +8,7 @@ export default function Navbar() {
   return (
     <header className={styles.header}>
       <Link href="/">
-        <a className={styles.logo}>CryptoTrackr</a>
+        <a className={styles.logo}>CryptoTracker</a>
       </Link>
       <nav className={styles.nav}>
         <ul className={styles.list}>

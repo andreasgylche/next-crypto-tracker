@@ -1,12 +1,16 @@
-import styles from '../../styles/Home.module.css';
+import TopCoin from './TopCoin';
+import styles from './TopCoins.module.css';
 
-export default function TrendingCoins({ allCoins }) {
+export default function TopCoins({ allCoins }) {
+  console.log(allCoins);
   return (
     <div>
       <h2>Top 100 coins by market cap</h2>
-      {allCoins.map((coin) => {
-        return <p key={coin.id}>{coin.name}</p>;
-      })}
+      <div className={styles.topContainer}>
+        {allCoins.map((coin) => {
+          return <TopCoin key={coin.id} coin={coin} />;
+        })}
+      </div>
     </div>
   );
 }
