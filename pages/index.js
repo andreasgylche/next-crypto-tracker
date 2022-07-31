@@ -4,7 +4,7 @@ import styles from '../styles/Home.module.css';
 import TrendingCoins from '../components/trending/TrendingCoins';
 import TopCoins from '../components/top/TopCoins';
 
-export default function Home({ trendingCoins, allCoins }) {
+export default function Home({ trendingCoins, topCoins }) {
   return (
     <div>
       <Head>
@@ -15,22 +15,22 @@ export default function Home({ trendingCoins, allCoins }) {
 
       <h1>Next.js Crypto Tracker</h1>
       <TrendingCoins trendingCoins={trendingCoins} />
-      <TopCoins allCoins={allCoins} />
+      <TopCoins topCoins={topCoins} />
     </div>
   );
 }
 
 export async function getServerSideProps() {
   const trendingUrl = 'https://api.coingecko.com/api/v3/search/trending';
-  const allCoinsUrl =
-    'https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=100&page=1&sparkline=false&price_change_percentage=1h%2C24%2C7d';
+  const topCoinsUrl =
+    'https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=10&page=1&sparkline=false&price_change_percentage=24h';
 
-  const [trendingCoinsRes, allCoinsRes] = await Promise.all([
+  const [trendingCoinsRes, topCoinsRes] = await Promise.all([
     axios.get(trendingUrl),
-    axios.get(allCoinsUrl),
+    axios.get(topCoinsUrl),
   ]);
 
   return {
-    props: { trendingCoins: trendingCoinsRes.data, allCoins: allCoinsRes.data },
+    props: { trendingCoins: trendingCoinsRes.data, topCoins: topCoinsRes.data },
   };
 }

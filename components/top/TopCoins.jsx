@@ -1,16 +1,19 @@
+import Link from 'next/link';
 import TopCoin from './TopCoin';
 import styles from './TopCoins.module.css';
 
-export default function TopCoins({ allCoins }) {
-  console.log(allCoins);
+export default function TopCoins({ topCoins }) {
   return (
     <div>
-      <h2>Top 100 coins by market cap</h2>
+      <h4>Top 10 coins by market cap</h4>
       <div className={styles.topContainer}>
-        {allCoins.map((coin) => {
+        {topCoins.map((coin) => {
           return <TopCoin key={coin.id} coin={coin} />;
         })}
       </div>
+      <Link href="/coins">
+        <a className={styles.button}>See more coins</a>
+      </Link>
     </div>
   );
 }

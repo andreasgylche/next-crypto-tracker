@@ -3,27 +3,27 @@ import styles from './TopCoin.module.css';
 export default function TopCoin({ coin }) {
   return (
     <div className={styles.topCoin}>
-      <span className={styles.rank}>{coin.market_cap_rank}</span>
+      <div className={styles.rank}>{coin.market_cap_rank}</div>
       <img className={styles.logo} src={coin.image} alt={coin.name + 'logo'} />
-      <span className={styles.name}>
+      <div className={styles.name}>
         {coin.name}{' '}
         <span className={styles.symbol}>{coin.symbol.toUpperCase()}</span>
-      </span>
-      <span className={styles.price}>${coin.current_price.toFixed(2)}</span>
+      </div>
+      <div className={styles.price}>${coin.current_price.toFixed(2)}</div>
 
       {coin.price_change_percentage_24h < 0 ? (
-        <span className={`${styles.priceChange} ${styles.red}`}>
+        <div className={`${styles.priceChange} ${styles.red}`}>
           {coin.price_change_percentage_24h.toFixed(2)}%
-        </span>
+        </div>
       ) : (
-        <span className={`${styles.priceChange} ${styles.green}`}>
+        <div className={`${styles.priceChange} ${styles.green}`}>
           {coin.price_change_percentage_24h.toFixed(2)}%
-        </span>
+        </div>
       )}
 
-      <span className={styles.marketCap}>
-        ${coin.market_cap.toLocaleString()}
-      </span>
+      <div className={styles.marketCap}>
+        ${coin.market_cap.toLocaleString('da-US')}
+      </div>
     </div>
   );
 }
