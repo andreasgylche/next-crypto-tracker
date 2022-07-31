@@ -6,7 +6,14 @@
   display: flex;
   justify-content: flex-start;
   align-items: center;
+  border: transparent 1px solid;
+  transition: border 0.3s;
 }
+
+.trendingCoin:hover {
+  border: lightgreen 1px solid;
+}
+
 .logo {
   margin-right: 0.5rem;
   border-radius: 25px;
