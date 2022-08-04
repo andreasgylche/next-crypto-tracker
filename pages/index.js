@@ -13,7 +13,6 @@ export default function Home({ trendingCoins, topCoins }) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <h1>Next.js Crypto Tracker</h1>
       <TrendingCoins trendingCoins={trendingCoins} />
       <TopCoins topCoins={topCoins} />
     </div>

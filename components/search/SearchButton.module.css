@@ -1,0 +1,42 @@
+.searchButton {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 2rem;
+  background-color: #111;
+  padding: 1rem 1.5rem;
+  border-radius: 0.5rem;
+  transition: border 0.3s;
+  border: transparent 1px solid;
+  cursor: pointer;
+}
+
+.searchButton:hover {
+  border: lightgreen 1px solid;
+}
+
+.label {
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #555;
+}
+
+.label svg {
+  height: 22px;
+  width: 22px;
+}
+
+.shortcut {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.shortcut code {
+  background-color: #222;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.25rem;
+}

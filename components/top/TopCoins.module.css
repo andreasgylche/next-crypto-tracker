@@ -5,7 +5,10 @@
 }
 
 .button {
-  display: inline-block;
+  display: block;
+  width: max-content;
+  margin: 0 auto;
+  margin-top: 2rem;
   background-color: #111;
   padding: 1rem 1.5rem;
   border-radius: 0.5rem;
