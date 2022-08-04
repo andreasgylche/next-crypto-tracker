@@ -1,0 +1,32 @@
+.optionContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  background-color: #222;
+  border-radius: 0.5rem;
+  padding: 1rem 1.5rem;
+}
+
+.details {
+  display: flex;
+  gap: 1rem;
+}
+
+.logo {
+  width: 25px;
+  height: 25px;
+  border-radius: 25px;
+}
+
+.symbol {
+  font-weight: bold;
+  opacity: 0.5;
+  font-size: 0.75em;
+  margin-left: 0.5em;
+}
+
+.rank {
+  font-weight: bold;
+  opacity: 0.5;
+}

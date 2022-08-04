@@ -1,0 +1,23 @@
+.optionsContainer {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-height: 60vh;
+  overflow-y: scroll;
+  scrollbar-gutter: stable;
+  -webkit-scrollbar-gutter: stable;
+  -ms-scrollbar-gutter: 0.5rem;
+  padding-right: 1rem;
+}
+
+.optionsContainer::-webkit-scrollbar {
+  width: 1rem;
+  border-radius: 0.25rem;
+  background-color: #222;
+}
+
+.optionsContainer::-webkit-scrollbar-thumb {
+  background-color: #111;
+  border-radius: 0.25rem;
+}

@@ -1,3 +1,20 @@
 .searchFieldContainer {
-  margin-top: 4rem;
+  margin-top: 10vh;
+}
+
+.searchInput {
+  width: 100%;
+  font-size: 1.5rem;
+  padding: 1rem 1.5rem;
+  border-radius: 0.5rem;
+  transition: border 0.3s;
+  outline: none;
+  background-color: #222;
+  border: transparent 1px solid;
+}
+
+.searchInput:focus,
+.searchInput:focus-visible,
+.searchInput:focus-within {
+  border: lightgreen 1px solid !important;
 }
