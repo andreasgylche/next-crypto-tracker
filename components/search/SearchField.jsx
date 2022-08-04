@@ -1,5 +1,5 @@
 import styles from './SearchField.module.css';
 
 export default function SearchField() {
-  return <div>SearchField</div>;
+  return <div className={styles.searchFieldContainer}>SearchField</div>;
 }

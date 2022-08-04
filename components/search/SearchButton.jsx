@@ -15,7 +15,14 @@ export default function SearchButton() {
   };
 
   const handleKeyDown = useCallback((e) => {
+    console.log(e);
+    // if ctrl+k is pressed
     if (e.key.toLowerCase() === 'k' && e.ctrlKey === true) {
+      e.preventDefault();
+      toggleSearch();
+    }
+    // if search field is shown and escape key is pressed
+    if (activeSearch === true && e.key === 'Escape') {
       e.preventDefault();
       toggleSearch();
     }
@@ -42,7 +49,7 @@ export default function SearchButton() {
           <code>k</code>
         </div>
       </div>
-      {activeSearch ? <SearchOverlay activeSearch={activeSearch} /> : ''}
+      {activeSearch ? <SearchOverlay toggleSearch={toggleSearch} /> : null}
     </>
   );
 }
