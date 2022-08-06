@@ -48,7 +48,7 @@ export default function SearchButton() {
           <code>k</code>
         </div>
       </div>
-      {activeSearch ? <SearchOverlay /> : null}
+      {activeSearch && <SearchOverlay />}
     </>
   );
 }
