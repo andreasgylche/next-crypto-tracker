@@ -15,14 +15,18 @@ export default function SearchOverlay() {
   useEffect(() => {
     let searchUrl = `https://api.coingecko.com/api/v3/search?query=${searchInput}`;
 
-    const res = axios
-      .get(searchUrl)
-      .then((res) => {
-        setSearchedCoins(res.data.coins);
-      })
-      .catch((error) => {
-        console.log(error);
-      });
+    const fetchCoins = async () => {
+      const res = axios
+        .get(searchUrl)
+        .then((res) => {
+          setSearchedCoins(res.data.coins);
+        })
+        .catch((error) => {
+          console.log(error);
+        });
+    };
+
+    fetchCoins();
   }, [searchInput]);
 
   return (
