@@ -1,4 +1,5 @@
 import axios from 'axios';
+import { useState } from 'react';
 import Head from 'next/head';
 import CoinsTable from '../../components/coins/CoinsTable';
 
@@ -17,8 +18,9 @@ export default function Coins({ coins }) {
 }
 
 export async function getServerSideProps() {
-  const url =
-    'https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=100&page=1&sparkline=false&price_change_percentage=24h';
+  // TODO: Change pagination 🤔
+  const pid = 1;
+  const url = `https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=100&page=${pid}&sparkline=false&price_change_percentage=24h`;
   const res = await axios.get(url);
 
   return {
