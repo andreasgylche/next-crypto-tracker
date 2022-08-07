@@ -1,6 +1,6 @@
-import styles from './TopCoin.module.css';
+import styles from './Coin.module.css';
 
-export default function TopCoin({ coin }) {
+export default function Coin({ coin }) {
   return (
     <div className={styles.topCoin}>
       <div className={styles.rank}>{coin.market_cap_rank}</div>

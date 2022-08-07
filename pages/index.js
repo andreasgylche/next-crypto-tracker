@@ -2,9 +2,10 @@ import axios from 'axios';
 import Head from 'next/head';
 import styles from '../styles/Home.module.css';
 import TrendingCoins from '../components/trending/TrendingCoins';
-import TopCoins from '../components/top/TopCoins';
+import CoinsTable from '../components/coins/CoinsTable';
+import Link from 'next/link';
 
-export default function Home({ trendingCoins, topCoins }) {
+export default function Home({ trendingCoins, coins }) {
   return (
     <div>
       <Head>
@@ -14,7 +15,10 @@ export default function Home({ trendingCoins, topCoins }) {
       </Head>
 
       <TrendingCoins trendingCoins={trendingCoins} />
-      <TopCoins topCoins={topCoins} />
+      <CoinsTable coins={coins} />
+      <Link href="/coins">
+        <a className={styles.button}>See more coins</a>
+      </Link>
     </div>
   );
 }
@@ -30,6 +34,6 @@ export async function getServerSideProps() {
   ]);
 
   return {
-    props: { trendingCoins: trendingCoinsRes.data, topCoins: topCoinsRes.data },
+    props: { trendingCoins: trendingCoinsRes.data, coins: topCoinsRes.data },
   };
 }
